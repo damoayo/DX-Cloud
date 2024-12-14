@@ -1,6 +1,6 @@
-# MAMAPAI-Books
+# MAMAPAI-Homepage
 
-서적 정보 제공 및 후기 작성과 공유를 위한 모바일 웹 플랫폼
+Devextreme 라이브러리를 사용하여 간단한 반응형 홈페이지 제작
 
 <img src="./public/mamapai.png" alt="Mamapai 커버이미지" width="480" />
 
@@ -44,12 +44,9 @@
 
 ### 디자인 및 프로토타입
 
-
-
 ### 프로젝트 및 이슈 관리
 
 - **GitHub**
-
 
 ## 개발 환경설정
 
