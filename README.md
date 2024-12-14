@@ -16,7 +16,8 @@
 
 - ![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react)
   ![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=flat-square&logo=typescript)
-  ![Next JS](https://img.shields.io/badge/-Next-black?style=flat-square&logo=next.js&logoColor=white)
+  ![Devextreme](https://img.shields.io/badge/-Devextreme-FF00FF?style=flat-rounded&logo=DevExtreme&logoColor=white)
+  ![Tailwind CSS](https://img.shields.io/badge/-TailwindCSS-black?style=flat-square&logo=TailwindCSS)
 
 ### 데이터베이스 및 계정 관리
 
@@ -33,9 +34,8 @@
 
 ### UI 구성 요소
 
-- **React-Slick**
-- **Slick-Carousel**
-- **React-Hot-Toast**
+- ![Tailwind CSS](https://img.shields.io/badge/-TailwindCSS-black?style=flat-square&logo=TailwindCSS)
+- ![Devextreme](https://img.shields.io/badge/-Devextreme-FF00FF?style=flat-rounded&logo=DevExtreme&logoColor=white)
 
 ### 코드 품질 도구
 
@@ -44,13 +44,12 @@
 
 ### 디자인 및 프로토타입
 
-- [**Figma**](https://www.figma.com)
+
 
 ### 프로젝트 및 이슈 관리
 
 - **GitHub**
-- **Notion**
-- **Asana**
+
 
 ## 개발 환경설정
 
@@ -84,7 +83,6 @@ Prettier와 ESLint를 함께 사용하여 코드 스타일을 일관되게 유�
 
 ### 로컬에서 실행하기 위한 필수 요구사항
 
-- Node.js (버전 14 이상)
 - npm 또는 yarn
 
 ### 설치 및 실행 명령어
@@ -120,7 +118,7 @@ npm run start
 환경 변수를 설정합니다:
 
 ```
-NEXT_PUBLIC_API_SERVER_URL=http://localhost:12345
+NEXT_PUBLIC_API_SERVER_URL=
 ```
 
 `.env` 파일은 보안 및 환경 차이로 인해 Git에 커밋되지 않도록 `gitignore`에
@@ -128,17 +126,11 @@ NEXT_PUBLIC_API_SERVER_URL=http://localhost:12345
 
 ## **주요 기능**
 
-### 후기 작성
+### 간단한 홈페이지 제작
 
-- 사용자가 원하는 서적에 대한 후기 작성 가능.
+- Devextreme의 다양한 컴포넌트 사용 적용
 
 ### 검색
-
-- 사용자가 원하는 서적을 실시간 검색하여 관련된 서적 목록을 즉시 확인 가능.
-- 검색어는 Redux에 저장되어 전역 상태 관리가 가능하며, 검색 결과 페이지, 검색
-  기록 등 다양한 컴포넌트에서 참조됨.
-- 최근 검색어 기록은 로컬 스토리지에 저장되며 최대 5개 유지됨. 검색어 기록 삭제
-  가능.
 
 ### 북마크
 
