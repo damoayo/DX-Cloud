@@ -3,13 +3,13 @@ import Toolbar, { Item } from "devextreme-react/toolbar";
 import { ItemClickEvent } from "devextreme/ui/toolbar";
 import "./Navbar.css";
 
+/* DevExtreme의 dxMenu 컴포넌트를 사용한다면 onItemClick 이벤트 객체에는 itemData가 포함됩니다. */
+
 const Navbar = () => {
   const navigate = useNavigate();
   const onItemClick = (e: ItemClickEvent) => {
     if (e.itemData?.options.text) {
-      if (e.itemData.options.text !== "Home") {
-        navigate(`/${e.itemData.options.text.toLowerCase()}`);
-      }
+      navigate(`/${e.itemData.options.text.toLowerCase()}`);
     } else {
       navigate("/");
     }
@@ -18,11 +18,19 @@ const Navbar = () => {
   return (
     <div className="p-2 mx-4 md:p-4 shadow-md">
       <Toolbar onItemClick={onItemClick}>
-        {<Item location="before" options={homeOptions}>
-          <Link to="/">
-            <h1 className="pr-2">DxCloud</h1>
-          </Link>
-        </Item>}
+        {
+          <Item location="before" options={homeOptions}>
+            <Link to="/">
+              <h2 className="pr-2 ">MamaPai</h2>
+            </Link>
+          </Item>
+        }
+        <Item
+          widget="dxButton"
+          location="before"
+          locateInMenu="auto"
+          options={homeOptions}
+        />
         <Item
           widget="dxButton"
           location="before"
@@ -47,6 +55,12 @@ const Navbar = () => {
           locateInMenu="auto"
           options={logInOptions}
         />
+        <Item
+          widget="dxButton"
+          location="before"
+          locateInMenu="auto"
+          options={contactOptions}
+        />
       </Toolbar>
     </div>
   );
@@ -66,6 +80,10 @@ const productsOptions = {
 };
 const pricingOptions = {
   text: "Pricing",
+  stylingMode: "text",
+};
+const contactOptions = {
+  text: "Contact",
   stylingMode: "text",
 };
 const logInOptions = {

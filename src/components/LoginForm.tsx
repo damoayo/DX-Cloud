@@ -10,14 +10,49 @@ import Form, {
 } from "devextreme-react/form";
 import LoadIndicator from "devextreme-react/load-indicator";
 import notify from "devextreme/ui/notify";
+import { off } from "devextreme/events";
 
 const LoginForm = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const formData = useRef({ email: "", password: "" });
 
+  const onSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await fetch("http://121.143.229.189:3000/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData.current),
+      });
+      const data = await response.json();
+      if (data.success) {
+        localStorage.setItem("token", data.token);
+        navigate("/");
+      } else {
+        notify({
+          message: data.message,
+          type: "error",
+          displayTime: 3000,
+          position: {
+            my: "center top",
+            at: "center top",
+            offset: "0 100",
+          },
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <form>
+    <form id="form" className="p-8" onSubmit={onSubmit}>
       <Form
         formData={formData.current}
         disabled={loading}

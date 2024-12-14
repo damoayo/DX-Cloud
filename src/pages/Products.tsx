@@ -4,7 +4,9 @@ const Products = () => {
   return (
     <div>
       <Navbar />
-      <h1>Products</h1>
+      <div className="flex justify-center items-center min-h-[85vh]  md:m-4 bg-[#16232e]">
+        <h1>Products</h1>
+      </div>
     </div>
   );
 };

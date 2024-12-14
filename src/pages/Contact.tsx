@@ -1,15 +1,15 @@
 import Navbar from "../components/navbar/Navbar"
 
-const About = () => {
+const Contact = () => {
   return (
     <div>
       <Navbar />
       <div className="flex justify-center items-center min-h-[85vh]  md:m-4 bg-[#16232e]">
-        <h1>About</h1>
+        <h1>Contact</h1>
       </div>
     </div>
-  
+
   )
 }
 
-export default About
+export default Contact
