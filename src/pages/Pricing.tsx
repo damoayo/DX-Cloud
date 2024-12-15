@@ -9,15 +9,15 @@ type PricingData = {
 const data: PricingData[] = [
   {
     title: "Cloud Storage",
-    content: "Free forever",
+    content: "Price per 100gb: $10",
   },
   {
     title: "Virtual Machines",
-    content: "Free forever",
+    content: "Price per CPU core: $5",
   },
   {
     title: "Web Hosting",
-    content: "Free forever",
+    content: "Price per website: $15",
   },
 ];
 
@@ -45,18 +45,10 @@ const Pricing = () => {
 };
 
 const CustomTitle = (data: PricingData) => {
-  return (
-    <div className="text-2xl">
-      {data.title}
-    </div>
-  )
-}
+  return <div className="text-2xl">{data.title}</div>;
+};
 const CustomItem = (data: PricingData) => {
-  return (
-    <div className="text-xl items-start justify-left">
-      {data.content}
-    </div>
-  )
-}
+  return <div className="text-xl items-start justify-left">{data.content}</div>;
+};
 
 export default Pricing;
