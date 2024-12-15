@@ -14,7 +14,7 @@ Devextreme 라이브러리를 사용하여 간단한 반응형 홈페이지 제�
 
 ### 프레임워크 및 라이브러리
 
-- ![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react)
+- ![Vite](https://img.shields.io/badge/-Vite-black?style=flat-square&logo=Vite)
   ![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=flat-square&logo=typescript)
   ![Devextreme](https://img.shields.io/badge/-Devextreme-FF00FF?style=flat-rounded&logo=DevExtreme&logoColor=white)
   ![Tailwind CSS](https://img.shields.io/badge/-TailwindCSS-black?style=flat-square&logo=TailwindCSS)
