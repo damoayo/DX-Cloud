@@ -9,27 +9,29 @@ import Form, {
 } from "devextreme-react/form";
 import "devextreme-react/text-area";
 
-type ContactFormProps = {
+type ContactFormData = {
   name: string;
   email: string;
   message: string;
 };
 
 const ContactForm = () => {
-  const formData = useRef<ContactFormProps>({
+  const formData = useRef<ContactFormData>({
     name: "",
     email: "",
     message: "",
   });
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+
+  const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    alert("Form submitted");
+    alert("Form submitted!");
     console.log(formData.current);
   };
+
   return (
     <>
-      <h1 className="text-4xl font-bold">Contact Us</h1>
-      <form onSubmit={onSubmit}>
+      <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+      <form id="form" onSubmit={onSubmit}>
         <Form
           formData={formData.current}
           showColonAfterLabel={false}
@@ -44,7 +46,11 @@ const ContactForm = () => {
             <EmailRule message="Email is invalid" />
             <Label text="Email" />
           </Item>
-          <Item dataField="message" editorType="dxTextArea" editorOptions={messageOptions}>
+          <Item
+            dataField="message"
+            editorType="dxTextArea"
+            editorOptions={messageOptions}
+          >
             <RequiredRule message="Message is required" />
             <Label text="Message" />
           </Item>
@@ -59,8 +65,6 @@ const ContactForm = () => {
   );
 };
 
-const messageOptions = {
-  height: 100,
-}
+const messageOptions = { height: 100, placeholder: "Message" };
 
 export default ContactForm;

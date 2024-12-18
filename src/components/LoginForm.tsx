@@ -14,13 +14,13 @@ import notify from "devextreme/ui/notify";
 const LoginForm = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const formData = useRef({ email: "", password: "" });
+  const formData = useRef({ email: "", passord: "" });
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("http://121.143.229.189:3000/auth/login", {
+      const response = await fetch("http://localhost:8080/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,17 +80,17 @@ const LoginForm = () => {
             {loading ? (
               <LoadIndicator width="24px" height="24px" visible={true} />
             ) : (
-              "Log In"
+              "Login"
             )}
           </ButtonOptions>
         </ButtonItem>
         <Item>
           <div className="flex justify-center">
             <Link
-              to="/forget-password"
-              className="text-blue-500 hover:text-blue-700 "
+              to="/forgot-password"
+              className="text-blue-500 hover:text-blue-800"
             >
-              Forgot password?
+              Forgot Password?
             </Link>
           </div>
         </Item>
@@ -118,4 +118,5 @@ const passwordEditorOptions = {
   placeholder: "Password",
   mode: "password",
 };
+
 export default LoginForm;
