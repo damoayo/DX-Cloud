@@ -1,5 +1,9 @@
 const DashboardWebHosting = () => {
-  return <h1>DashboardWebHosting</h1>;
+  return (
+    <div>
+      <h1>준비중</h1>
+    </div>
+  );
 };
 
 export default DashboardWebHosting;
