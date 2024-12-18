@@ -1,18 +1,18 @@
 import { Button } from "devextreme-react/button";
+import Dx1 from "../assets/Dx1.png";
+import Dx2 from "../assets/Dx2.png";
+import Dx3 from "../assets/Dx3.png";
 import Navbar from "../components/navbar/Navbar";
-import demo1 from "../assets/demo1.png";
-import demo2 from "../assets/demo2.png";
-import demo3 from "../assets/demo3.png";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <div className="flex justify-center items-center min-h-[85vh] md:m-4 bg-[#16232e]">
+      <div className="flex min-h-[85vh] m-2 md:m-4 justify-center items-center bg-[#16232e]">
         <div className="pb-16 pt-10 text-center min-w-full">
-          <h1>MamaPai</h1>
+          <h1>DxCloud</h1>
           <h3 className="text-2xl text-gray-300">
-            Personal computing made simple
+            Personal cloud computing made simple
           </h3>
           <br />
           <h3 className="text-gray-300">
@@ -37,15 +37,15 @@ const Home = () => {
           <div className="mt-14 md:mt-24 bg-[#141e28] min-w-9 p-8 md:p-14 shadow-md">
             <br />
             <p className="text-2xl">Trusted by industry leaders</p>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-x-4 mt-8">
-              <img src={demo1} alt="demo1" className="w-[280px]" />
-              <img src={demo2} alt="demo2" className="w-[280px]" />
-              <img src={demo3} alt="demo3" className="w-[280px]" />
+            <div className="flex flex-col md:flex-row justify-center gap-x-8 mt-8">
+              <img src={Dx1} alt="Dx1" />
+              <img src={Dx2} alt="Dx2" />
+              <img src={Dx3} alt="Dx3" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
