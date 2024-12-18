@@ -5,28 +5,28 @@ const data = [
   {
     name: "Vitual Machines",
     description:
-      "lor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Empower your digital projects with the performance of our Virtual Private Servers (VPS). Ideal for businesses, developers, and demanding applications, our VPS hosting provides dedicated resources within a virtualized environment. Customize server configurations, install software you need, and enjoy dedicated computing power without the cost of a physical server. ",
     image: "https://picsum.photos/id/10/800/300",
   },
   {
     name: "Cloud Storage",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Experience seamless data management and accessibility with our Cloud Storage solution. Whether you're an individual, business, or developer, our scalable and secure cloud storage allows you to store, retrieve, and share your data effortlessly. Enjoy the benefits of automatic backups, collaborative file sharing, and the flexibility to scale your storage needs as your requirements evolve. ",
     image: "https://picsum.photos/id/11/800/300",
   },
   {
     name: "Web Hosting",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Bring your online presence to life with our Website Hosting services. Whether you're launching a personal blog, a business website, or an e-commerce platform, our hosting solutions offer a reliable and secure foundation. Enjoy fast loading times, high availability, and a user-friendly control panel for easy management. With support for various web technologies.",
     image: "https://picsum.photos/id/12/800/300",
   },
 ];
 
 const Products = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <div className="flex justify-center min-h-[85vh] m-2 md:m-4 bg-[#16232e]">
+      <div className="flex min-h-[85vh] m-2 md:m-4 justify-center bg-[#16232e]">
         <div className="pb-16 pt-16 text-center min-w-full">
           <h1 className="text-4xl font-bold">Products</h1>
           <p className="py-8 text-xl font-bold">
@@ -51,7 +51,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

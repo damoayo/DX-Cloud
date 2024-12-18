@@ -8,10 +8,10 @@ type ProductCardProps = {
 
 const ProductCard = (props: ProductCardProps) => {
   return (
-    <div className="justify-center items-center shadow-md bg-[#141e28] rounded-md p-4 m-4">
-      <h2 className="text-xl font-bold to-current pb-4">{props.name}</h2>
+    <div className="justify-center items-center shadow-md bg-[#141e28] rounded-lg p-4 m-4">
+      <h2 className="text-xl font-bold text-center pb-4">{props.name}</h2>
       <div className="flex justify-center items-center">
-        <img src={props.imageURL} className="rounded-md w-[90%]" alt="" />
+        <img src={props.imageURL} className="rounded-md w-[90%]" />
       </div>
       <p className="p-4 text-lg text-left">{props.description}</p>
       <Button
