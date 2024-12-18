@@ -1,6 +1,12 @@
 import { useCallback, useState } from 'react';
 import TreeView, { TreeViewTypes } from 'devextreme-react/tree-view';
 
+interface TreeViewItem {
+  id: string;
+  text: string;
+  expanded?: boolean;
+  items?: TreeViewItem[];
+}
 
 const docs = [{
   id: '1',
@@ -88,12 +94,17 @@ const docs = [{
 }];
 
 const DashboardSupport = () => {
-  const [currentItem, setCurrentItem] = useState({ ...docs[0] });
+  const [currentItem, setCurrentItem] = useState<TreeViewItem | null>(null);
 
   const onItemClick = useCallback((e: TreeViewTypes.ItemClickEvent) => {
-    setCurrentItem({ ...e.itemData });
+    const { id, text, expanded, items } = e.itemData || {};
 
-  }, [setCurrentItem]);
+    if (typeof id === "string" && typeof text === "string") {
+      setCurrentItem({ id: id?.toString() || '', text, expanded, items: items as TreeViewItem[] | undefined });
+    } else {
+      console.error("ID 또는 텍스트가 유효하지 않습니다.");
+    }
+  }, []);
 
   return (
     <div>
@@ -113,7 +124,7 @@ const DashboardSupport = () => {
           />
         </div>
         <div>
-          <h3>{currentItem.text}</h3>
+          <h3>{currentItem?.text}</h3>
         </div>
       </div>
     </div>
