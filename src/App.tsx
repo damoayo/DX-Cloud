@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "devextreme/dist/css/dx.fluent.saas.dark.css";
 
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -13,6 +14,7 @@ import DashboardProfile from "./pages/Dashboard/DashboardProfile";
 import DashboardCloudStorage from "./pages/Dashboard/DashboardCloudStorage";
 import AddCloudStorage from "./pages/Dashboard/AddCloudStorage";
 import DashboardVirtualMachines from "./pages/Dashboard/DashboardVirtualMachines";
+import DashboardWebHosting from "./pages/Dashboard/DashboardWebHosting";
 import DashboardSupport from "./pages/Dashboard/DashboardSupport";
 
 const App = () => {
@@ -30,6 +32,7 @@ const App = () => {
         <Route path="cloud-storage" element={<DashboardCloudStorage />} />
         <Route path="cloud-storage/create-new" element={<AddCloudStorage />} />
         <Route path="virtual-machines" element={<DashboardVirtualMachines />} />
+        <Route path="web-hosting" element={<DashboardWebHosting />} />
         <Route path="support" element={<DashboardSupport />} />
       </Route>
     </Routes>
