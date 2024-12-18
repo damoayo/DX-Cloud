@@ -6,9 +6,9 @@ Devextreme 라이브러리를 사용하여 간단한 반응형 홈페이지 제�
 
 ### 배포 링크, 테스트 계정
 
-- 배포 링크: [https://dx-cloud-s2g5.vercel.app/](https://dx-cloud-s2g5.vercel.app/)
-- ID: [demo.account@example.com](mailto:demo.account@example.com)
-- PW:
+- 배포 링크: [https://dx-cloud.vercel.app/](https://dx-cloud.vercel.app/)
+- ID: [mp@email.com](mailto:demo.account@example.com)
+- PW: pass
 
 ## **기술 스택**
 
