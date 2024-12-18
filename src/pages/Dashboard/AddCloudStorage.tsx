@@ -1,5 +1,4 @@
-import { Form, SimpleItem, Label, ButtonItem } from 'devextreme-react/form';
-import { Slider } from 'devextreme-react/slider';
+import { Form, SimpleItem, Label, ButtonItem } from "devextreme-react/form";
 
 const AddCloudStoreage = () => {
   return (
@@ -12,10 +11,18 @@ const AddCloudStoreage = () => {
           <SimpleItem dataField="name" editorType="dxTextBox">
             <Label text="Name" />
           </SimpleItem>
-          <SimpleItem dataField="location" editorType="dxSelectBox" editorOptions={selectBoxOptions}>
+          <SimpleItem
+            dataField="location"
+            editorType="dxSelectBox"
+            editorOptions={selectBoxOptions}
+          >
             <Label text="Location" />
           </SimpleItem>
-          <SimpleItem dataField="size" editorType="dxSlider" editorOptions={sliderOptions}>
+          <SimpleItem
+            dataField="size"
+            editorType="dxSlider"
+            editorOptions={sliderOptions}
+          >
             <Label text="Size (Gb)" />
           </SimpleItem>
           <ButtonItem
@@ -26,11 +33,22 @@ const AddCloudStoreage = () => {
       </div>
     </div>
   );
-}
+};
 
 const selectBoxOptions = {
-  items: ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose"],
-  value: "New York"
+  items: [
+    "New York",
+    "Los Angeles",
+    "Chicago",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego",
+    "Dallas",
+    "San Jose",
+  ],
+  value: "New York",
 };
 
 const sliderOptions = {
@@ -41,8 +59,8 @@ const sliderOptions = {
   tooltip: {
     enabled: true,
     showMode: "always",
-    position: "bottom"
-  }
+    position: "bottom",
+  },
 };
 
 export default AddCloudStoreage;

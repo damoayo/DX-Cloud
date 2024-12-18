@@ -4,6 +4,7 @@ import Navbar from "../components/navbar/Navbar";
 type PricingData = {
   title: string;
   content: string;
+  price: number;
 };
 
 const data: PricingData[] = [
