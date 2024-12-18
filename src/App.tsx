@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import "devextreme/dist/css/dx.fluent.saas.dark.css";
 
+
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
@@ -20,6 +22,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/products" element={<Products />} />
       <Route path="/pricing" element={<Pricing />} />
