@@ -21,16 +21,9 @@ Devextreme 라이브러리를 사용하여 간단한 반응형 홈페이지 제�
 
 ### 데이터베이스 및 계정 관리
 
-- ![Supabase](https://img.shields.io/badge/-Supabase-black?style=flat-square&logo=Supabase)
-  - **Supabase**
-  - **Authentication**
-  - **Emulator**
+- ![Express](https://img.shields.io/badge/-Express-black?style=flat-square&logo=Express)
 
 ### HTTP 클라이언트 및 유틸리티
-
-- **Axios**
-- **UUID**
-- **Lodash**
 
 ### UI 구성 요소
 
@@ -62,13 +55,6 @@ Devextreme 라이브러리를 사용하여 간단한 반응형 홈페이지 제�
 
 ### 브랜치 전략
 
-- **Feature Branch Workflow**를 사용해 각 기능을 독립적으로 개발했습니다.
-- 각자의 페이지나 기능에 맞는 브랜치를 생성하고, 해당 브랜치에서 기능 개발 및
-  커밋을 진행했습니다.
-- 완료된 기능은 Pull Request를 통해 메인 브랜치에 병합 요청하며, 이 과정에서
-  코드 리뷰와 충돌 해결을 거쳐 안정적인 코드만 메인에 병합합니다.
-- 이를 통해 협업 시 충돌을 최소화하고, 코드 품질을 유지했습니다.
-
 ### 코드 포매터 및 품질 관리
 
 Prettier와 ESLint를 함께 사용하여 코드 스타일을 일관되게 유지하고 코드 품질을
@@ -78,36 +64,13 @@ Prettier와 ESLint를 함께 사용하여 코드 스타일을 일관되게 유�
 
 ## **설치 및 실행 방법**
 
+- git clone https://github.com/damoayo/DX-Cloud.git
+- npm install
+- npm run dev
+
 ### 로컬에서 실행하기 위한 필수 요구사항
 
 - npm 또는 yarn
-
-### 설치 및 실행 명령어
-
-1. 프로젝트 클론
-
-```bash
-git clone https://github.com/
-cd mamapai
-```
-
-2. 의존성 설치
-
-```bash
-# npm을 사용하는 경우
-npm install
-
-# yarn을 사용하는 경우
-yarn install
-```
-
-3. 프로젝트 실행
-
-```bash
-# npm을 사용하는 경우
-npm run start
-
-```
 
 ### 환경 변수 설정 방법: .env 파일 예시
 
@@ -135,39 +98,47 @@ NEXT_PUBLIC_API_SERVER_URL=
 
 ```bash
 src/
-├── api/                          # API 통신 모듈 폴더
-│   ├── Supabase.js               # Supabase API 호출 파일
-│   ├── auth.js                   # 인증 관리
-│   └── reviewInfo.js             # 리뷰 정보 관리
-│
-├── app/                          # 전역 상태 관리 및 공통 훅 폴더
-│   ├── store.ts                  # Redux 스토어 설정 파일
-│   └── hooks.ts                  # 전역 상태 접근 공통 훅 정의
-│
 ├── assets/                       # 이미지, 폰트 및 아이콘 폴더
 │   ├── img/                      # 일반 이미지 파일 저장
 │   └── svg/                      # React 컴포넌트 형태의 SVG 아이콘 관리
 │
-├── components/                   # 재사용 가능한 UI 컴포넌트 폴더
-│   ├── common/                   # 공통 컴포넌트 (버튼, 입력 폼, 모달 등)
-│   └── layout/                   # 레이아웃 컴포넌트 (Header, Footer 등)
+├── components/
+│       ├── ContactForm.tsx       # contact submit폼. ButtonItem,ButtonOptions외 다수의 devextreme 컴포넌트 사용.
+│       ├── LoginForm.tsx         # 로그인 폼. 다수의 devextreme 컴포넌트 사용.
+│       ├── ProductCard.tsx       # 카드형태 버튼. devextreme Button사용
+│       │── Dashboard/
+│       │    ├── CloudStoragePriceGauge.tsx     # CircularGauge등 다수의 devextreme 컴포넌트 사용.
+│       │    ├── CloudStorageUsageGauge.tsx     # CircularGauge등 다수의 devextreme 컴포넌트 사용.
+│       │    ├── TotalNodesChart.tsx            # PieChart등 다수의 devextreme 컴포넌트 사용.
+│       │    └── VirtualMachinesGridDetail.tsx  # CircularGauge등 다수의 devextreme 컴포넌트 사용.
+│       └── navbar/
+│            ├── Navbar.css       # Text 크기조절
+│            └── Navbar.tsx       # ToolbarTypes, Toolbar등 다수의 devextreme 컴포넌트 사용.
 │
-├── context/                      # 전역 관리 React Context 폴더
-│   └── RequestContext.tsx        # 요청 상태 관리
+├── layouts/
+│   ├── dashboard.css             # font,padding,margin
+│   └── Dashboard.tsx             # Drawer, Toolbar등 다수의 devextreme 컴포넌트 사용.
 │
-├── supabase/                     # Supabase 설정 파일 폴더
-│   └── index.ts                  # Supabase 초기화 및 설정 파일
+├── pages/
+│       ├── About.tsx             # About페이지 내용
+│       ├── Contact.tsx           # Contact페이지
+│       ├── Home.tsx              # Home페이지
+│       ├── Login.tsx             # Login페이지
+│       ├── Pricing.tsx           # Pricing페이지. Accordion등 다수의 devextreme 컴포넌트 사용.
+│       ├── Products.tsx          # Products페이지. ProductCard, Navbar 컴포넌트 사용.
+│       └── Dashboard/
+│            ├── AddCloudStorage.tsx             # Cloud Storage페이지에서 Add Nodes에서 사용되는 컴포넌트.
+│            ├── DashboardCloudStorage.tsx       # DataGrid, DataGridTypes외 다수의 devextreme 컴포넌트 사용.
+│            ├── DashboardHome.tsx               # Dashboard Home페이지. TotalNodesChart등 devextreme 컴포넌트 사용.
+│            ├── DashboardProfile.tsx            # SimpleItem, GroupItem외 다수의 devextreme 컴포넌트 사용.
+│            ├── DashboardSupport.tsx            # TreeViewTypes, TreeView외 다수의 devextreme 컴포넌트 사용.
+│            ├── DashboardVirtualMachines.tsx    # DataGrid, MasterDetail외 다수의 devextreme 컴포넌트 사용.
+│            └── DashboardWebHosting.tsx         # Web Hosting 페이지 준비
 │
-├── hooks/                        # 커스텀 훅 모음 폴더
-│   ├── useCloseOnOutsideClick.js # 외부 클릭 감지
-│   └── useGetList.js             # 서적 목록 정보 조회
+├── App.tsx                       # 라우터 기능
 │
-├── utils/                        # 유틸리티 함수 폴더
-│   ├── getResizeImage.js         # 이미지 크기 조정 함수
-│   └── parseXml.js               # XML 파싱 함수
+├── index.css                     # tailwind 기본세팅
 │
-└── pages/                        # 페이지 컴포넌트 폴더
-    ├── Login.js                  # 로그인 페이지
-    └── Profile.js                # 프로필 페이지
+└── main.tsx                      # App 컴포넌트
 
 ```
