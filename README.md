@@ -5,7 +5,7 @@ Devextreme 라이브러리를 사용하여 간단한 반응형 홈페이지 제�
 <img src="./public/mamapai.png" alt="Mamapai 커버이미지" width="480" />
 
 ### 배포 링크, 테스트 계정
-
+!! 로그인 페이지를 볼수있게 메뉴에 dashboard버튼을 만들어 둠.
 - 배포 링크: [https://dx-cloud.vercel.app/](https://dx-cloud.vercel.app/)
 - ID: [mp@email.com](mailto:demo.account@example.com)
 - PW: pass
