@@ -23,9 +23,9 @@ const formatCurrency = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 }).format;
 
-const renderListGroup = (group) => <div className="city">{group.key}</div>;
+const renderListGroup = (group: { key: string }) => <div className="city">{group.key}</div>;
 
-const renderListItem = (item) => (
+const renderListItem = (item: { Hotel_Name: string; Postal_Code: string; Address: string; Hotel_Class: string; Price: number }) => (
   <div>
     <div className="hotel">
       <div className="name">{item.Hotel_Name}</div>

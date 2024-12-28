@@ -1,7 +1,4 @@
 import { Button } from "devextreme-react/button";
-import Dx1 from "../assets/Dx1.png";
-import Dx2 from "../assets/Dx2.png";
-import Dx3 from "../assets/Dx3.png";
 import Navbar from "../components/Navbar/Navbar";
 import ActionAndLists from "../components/MainLists/ActionAndLists";
 
