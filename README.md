@@ -5,7 +5,9 @@ Devextreme 라이브러리를 사용하여 간단한 반응형 홈페이지 제�
 <img src="./public/mamapai.png" alt="Mamapai 커버이미지" width="480" />
 
 ### 배포 링크, 테스트 계정
+
 !! 로그인 페이지를 볼수있게 메뉴에 dashboard버튼을 만들어 둠.
+
 - 배포 링크: [https://dx-cloud.vercel.app/](https://dx-cloud.vercel.app/)
 - ID: [mp@email.com](mailto:demo.account@example.com)
 - PW: pass
@@ -93,52 +95,3 @@ NEXT_PUBLIC_API_SERVER_URL=
 ### 검색
 
 ### 북마크
-
-## **프로젝트 구조**
-
-```bash
-src/
-├── assets/                       # 이미지, 폰트 및 아이콘 폴더
-│   ├── img/                      # 일반 이미지 파일 저장
-│   └── svg/                      # React 컴포넌트 형태의 SVG 아이콘 관리
-│
-├── components/
-│       ├── ContactForm.tsx       # contact submit폼. ButtonItem,ButtonOptions외 다수의 devextreme 컴포넌트 사용.
-│       ├── LoginForm.tsx         # 로그인 폼. 다수의 devextreme 컴포넌트 사용.
-│       ├── ProductCard.tsx       # 카드형태 버튼. devextreme Button사용
-│       │── Dashboard/
-│       │    ├── CloudStoragePriceGauge.tsx     # CircularGauge등 다수의 devextreme 컴포넌트 사용.
-│       │    ├── CloudStorageUsageGauge.tsx     # CircularGauge등 다수의 devextreme 컴포넌트 사용.
-│       │    ├── TotalNodesChart.tsx            # PieChart등 다수의 devextreme 컴포넌트 사용.
-│       │    └── VirtualMachinesGridDetail.tsx  # CircularGauge등 다수의 devextreme 컴포넌트 사용.
-│       └── navbar/
-│            ├── Navbar.css       # Text 크기조절
-│            └── Navbar.tsx       # ToolbarTypes, Toolbar등 다수의 devextreme 컴포넌트 사용.
-│
-├── layouts/
-│   ├── dashboard.css             # font,padding,margin
-│   └── Dashboard.tsx             # Drawer, Toolbar등 다수의 devextreme 컴포넌트 사용.
-│
-├── pages/
-│       ├── About.tsx             # About페이지 내용
-│       ├── Contact.tsx           # Contact페이지
-│       ├── Home.tsx              # Home페이지
-│       ├── Login.tsx             # Login페이지
-│       ├── Pricing.tsx           # Pricing페이지. Accordion등 다수의 devextreme 컴포넌트 사용.
-│       ├── Products.tsx          # Products페이지. ProductCard, Navbar 컴포넌트 사용.
-│       └── Dashboard/
-│            ├── AddCloudStorage.tsx             # Cloud Storage페이지에서 Add Nodes에서 사용되는 컴포넌트.
-│            ├── DashboardCloudStorage.tsx       # DataGrid, DataGridTypes외 다수의 devextreme 컴포넌트 사용.
-│            ├── DashboardHome.tsx               # Dashboard Home페이지. TotalNodesChart등 devextreme 컴포넌트 사용.
-│            ├── DashboardProfile.tsx            # SimpleItem, GroupItem외 다수의 devextreme 컴포넌트 사용.
-│            ├── DashboardSupport.tsx            # TreeViewTypes, TreeView외 다수의 devextreme 컴포넌트 사용.
-│            ├── DashboardVirtualMachines.tsx    # DataGrid, MasterDetail외 다수의 devextreme 컴포넌트 사용.
-│            └── DashboardWebHosting.tsx         # Web Hosting 페이지 준비
-│
-├── App.tsx                       # 라우터 기능
-│
-├── index.css                     # tailwind 기본세팅
-│
-└── main.tsx                      # App 컴포넌트
-
-```
