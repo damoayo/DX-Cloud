@@ -1,5 +1,5 @@
 import { Button } from "devextreme-react/button";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import ActionAndLists from "../components/MainLists/ActionAndLists";
 
 const Home = () => {

@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import PriceCom from "../components/Price/PriceCom";
 
 const Pricing = () => {
